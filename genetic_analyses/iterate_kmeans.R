@@ -1,8 +1,9 @@
+#Perform n iteration of k-means analyses in adegenet
 library(adegenet)
-hal<-read.genetix("snps.gtx")
-pca= 75
-iter=100
-nclust=50
+hal<-read.genetix("snps.gtx") #input_file
+pca=75 #number of pca components
+iter=100 #number of iteration
+nclust=50 #maximum number of K
 for(i in 1:iter){
 grp <- find.clusters(hal, max.n.clust = nclust, n.pca = pca, choose.n.clust = FALSE)
 if(i==1){
