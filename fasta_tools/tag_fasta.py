@@ -7,7 +7,7 @@ Add tag to fasta file header
 """
 
 fasta_file_read = open("mito.fasta", "r") #open fasta
-fasta_file_new = open("C:/Users/Rajiv/Documents/mito/mito_TAGGED.fasta", "w") #tagged fasta
+fasta_file_new = open("mito_TAGGED.fasta", "w") #tagged fasta
 g=open("mito_pop.txt", "r").readlines() #text file with first tag
 p=open("mito_period.txt", "r").readlines() #text file with second tag
 
