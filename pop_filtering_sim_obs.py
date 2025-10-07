@@ -39,5 +39,5 @@ for b in rmblocks:
 print(f"Removing {len(rmcols)} columns...")
 df_filt = df.drop(columns=rmcols)
 # Save output file
-df_filt.to_csv(file_output, index=False)
+df_filt.to_csv(file_output, index=False, sep=" ")
 print(f"Output saved as '{file_output}' with {df_filt.shape[1]} columns.")
