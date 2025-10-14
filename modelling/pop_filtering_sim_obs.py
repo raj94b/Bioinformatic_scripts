@@ -21,8 +21,8 @@ pop = list(range(1, npop + 1))  # [1, 2, 3, 4, 5, 6]
 comp = list(combinations(pop, 2))   # [(1,2), (1,3), ..., (5,6)]
 # Comparisons to be removed
 rmblocks = [
-    i for i, (a, b) in enumerate(comp)
-    if a in rmpop or b in rmpop
+    r for r, (a, j) in enumerate(comp)
+    if a in rmpop or j in rmpop
 ]
 
 print(f"Populations to be removed: {rmpop}")
@@ -30,9 +30,9 @@ print(f"Total comparisons: {len(comp)}")
 print(f"Comparisons to be removed: {[comp[i] for i in rmblocks]}")
 # Find columns
 rmcols = []
-for b in rmblocks:
-    start = b * col
-    end = (b + 1) * col
+for j in rmblocks:
+    start = j * col
+    end = (j + 1) * col
     print(f"Removing columns from index {start} to {end - 1}")
     rmcols.extend(df.columns[start:end])
 
